@@ -3,11 +3,11 @@ name = "stream-swap-math"
 version = "1.8.1"
 description = "Calculations for the StreamSwap invariant"
 license = "Apache-2.0"
-authors = ["michaelhly <michaelhly@gmail.com>"]
-homepage = "https://saber.so"
-repository = "https://github.com/saber-hq/stream-swap"
+authors = ["Stream Protocol <contact@streamprotocol.org>"]
+homepage = "https://swap.streamprotocol.org"
+repository = "https://github.com/streamdao/stream-swap"
 edition = "2021"
-keywords = ["solana", "saber", "math"]
+keywords = ["solana", "stream", "math"]
 
 [dependencies]
 borsh = "0.9.2"

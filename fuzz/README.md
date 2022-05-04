@@ -16,4 +16,4 @@ Detailed information on how to build on Stream Protocol can be found on the [Str
 
 ## License
 
-Saber StreamSwap is licensed under the Apache License, Version 2.0.
+StreamSwap is licensed under the Apache License, Version 2.0.

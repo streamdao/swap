@@ -1,12 +1,11 @@
 # `stream-swap`
 
-![StreamSwap by Saber](https://raw.githubusercontent.com/saber-hq/stream-swap/master/assets/banner.png)
+![StreamSwap by Stream Protocol/StreamDAO](https://raw.githubusercontent.com/streamdao/stream-swap/master/assets/banner.png)
 
 An automated market maker for mean-reverting trading pairs.
 
 ## About
-
-Saber is the leading StreamSwap exchange on [Solana](https://solana.com/https://solana.com/).
+Stream Protocol is the leading StreamSwap exchange on [Solana](https://solana.com/https://solana.com/).
 
 ### Programs
 
@@ -16,8 +15,8 @@ The program is deployed at the same address on `mainnet-beta`, `devnet`, and `te
 
 ## Documentation
 
-Detailed information on how to build on Saber can be found on the [Saber developer documentation website](https://docs.saber.so/docs/developing/overview).
+Detailed information on how to build on Stream Protocol can be found on the [StreamSwap developer documentation website](https://docs.streamprotocol/docs/swap/developing/overview).
 
 ## License
 
-Saber StreamSwap is licensed under the Apache License, Version 2.0.
+Stream Protocol´s StreamSwap is licensed under the Apache License, Version 2.0.
