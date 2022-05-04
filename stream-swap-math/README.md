@@ -1,0 +1,11 @@
+# stream-swap-math
+
+Calculations for the StreamSwap invariant.
+
+## Documentation
+
+Detailed information on how to build on Saber can be found on the [Saber developer documentation website](https://docs.saber.so/docs/developing/overview).
+
+## License
+
+Saber StreamSwap is licensed under the Apache License, Version 2.0.

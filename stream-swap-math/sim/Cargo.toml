@@ -1,0 +1,16 @@
+[package]
+name = "stream-swap-sim"
+version = "0.1.4"
+authors = ["Stream Protocol <contact@streamprotocol.org>"]
+description = "Simulations of the StreamSwap invariant compared to Curve's reference implementation."
+license = "Apache-2.0"
+homepage = "https://swap.streamprotocol.rg"
+repository = "https://github.com/streamdao/stream-swap"
+edition = "2021"
+keywords = ["solana", "stream", "curve", "sim"]
+
+[lib]
+name = "sim"
+
+[dependencies]
+pyo3 = { version = "^0.16.4", features = ["auto-initialize"] }

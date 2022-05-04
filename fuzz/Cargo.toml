@@ -1,0 +1,42 @@
+[package]
+name = "stream-swap-fuzz"
+version = "1.8.1"
+authors = ["Stream Protocol <development@streamprotocol.org>"]
+edition = "2021"
+description = "Fuzz tests for the Stream Protocol´s StreamSwap program."
+homepage = "https://swap.streamprotocol.org"
+repository = "https://github.com/streamdao/stream-swap"
+license = "Apache-2.0"
+keywords = ["solana", "stream", "fuzz"]
+
+[package.metadata]
+cargo-fuzz = true
+
+[lib]
+name = "fuzz"
+
+[dependencies]
+arbitrary = "1.0.0"
+chrono = "0.4"
+lazy_static = "1.4.0"
+libfuzzer-sys = "0.4.0"
+rand = "0.8.4"
+solana-program = "^1.9"
+spl-token = { version = "^3", features = ["no-entrypoint"] }
+stream-swap = { path = "../stream-swap-program/program", features = [
+    "fuzz",
+    "program",
+    "no-entrypoint"
+], version = "^1" }
+
+[[bin]]
+name = "fuzz_test"
+path = "targets/full.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "swaps_only_test"
+path = "targets/swaps_only.rs"
+test = false
+doc = false

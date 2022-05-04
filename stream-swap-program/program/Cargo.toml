@@ -1,0 +1,28 @@
+[package]
+name = "stream-swap"
+version = "1.8.1"
+authors = ["michaelhly <michaelhly@gmail.com>"]
+edition = "2021"
+description = "Saber StreamSwap program."
+homepage = "https://saber.so"
+repository = "https://github.com/saber-hq/stream-swap"
+keywords = ["solana", "saber", "program"]
+license = "Apache-2.0"
+
+[features]
+program = []
+no-entrypoint = []
+fuzz = ["stream-swap-client/fuzz"]
+
+[dependencies]
+solana-program = "^1.6.10"
+spl-token = { version = "^3", features = ["no-entrypoint"] }
+stream-swap-client = { path = "../../stream-swap-client", version = "^1" }
+stream-swap-math = { path = "../../stream-swap-math", version = "^1" }
+
+[dev-dependencies]
+solana-sdk = "^1.9.18"
+
+[lib]
+name = "stream_swap"
+crate-type = ["cdylib", "lib"]

@@ -1,0 +1,14 @@
+[package]
+name = "stream-swap-anchor"
+version = "1.8.1"
+description = "Anchor bindings for the StreamSwap Rust client."
+license = "Apache-2.0"
+authors = ["Stream Protocol <contact@streamprotocol.org>"]
+homepage = "https://swap.streamprotocol.org"
+repository = "https://github.com/streamdao/stream-swap"
+edition = "2021"
+keywords = ["solana", "stream", "anchor"]
+
+[dependencies]
+anchor-lang = ">=0.22.0"
+stream-swap-client = { path = "../stream-swap-client", version = "^1" }

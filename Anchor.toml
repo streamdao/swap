@@ -1,0 +1,28 @@
+anchor_version = "0.24.2"
+solana_version = "1.9.12"
+
+[workspace]
+members = [
+    "fuzz",
+    "stream-swap-anchor",
+    "stream-swap-client",
+    "stream-swap-math",
+    "stream-swap-math/sim",
+    "stream-swap-program/program"
+]
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[programs.mainnet]
+stream_swap = "SSwpkEEcbUqx4vtoEByFjSkhKdCT862DNVb52nZg1UZ"
+
+[programs.devnet]
+stream_swap = "SSwpkEEcbUqx4vtoEByFjSkhKdCT862DNVb52nZg1UZ"
+
+[programs.testnet]
+stream_swap = "SSwpkEEcbUqx4vtoEByFjSkhKdCT862DNVb52nZg1UZ"
+
+[programs.localnet]
+stream_swap = "SSwpkEEcbUqx4vtoEByFjSkhKdCT862DNVb52nZg1UZ"
