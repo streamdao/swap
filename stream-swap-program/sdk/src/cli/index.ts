@@ -132,7 +132,7 @@ export default async (): Promise<void> => {
 
     .command(
       "deploy-pool",
-      "Deploys a new StreamSwap pool.",
+      "Deploys a new Stream Swap pool.",
       // eslint-disable-next-line @typescript-eslint/no-empty-function
       (y) =>
         y

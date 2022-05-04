@@ -1,12 +1,12 @@
 [package]
 name = "stream-swap"
 version = "1.8.1"
-authors = ["michaelhly <michaelhly@gmail.com>"]
+authors = ["Stream Protocol <contact@streamprotocol.org>"]
 edition = "2021"
-description = "Saber StreamSwap program."
-homepage = "https://saber.so"
-repository = "https://github.com/saber-hq/stream-swap"
-keywords = ["solana", "saber", "program"]
+description = "StreamSwap program."
+homepage = "https://swap.streamprotocol.org"
+repository = "https://github.com/streamdao/stream-swap"
+keywords = ["solana", "steam", "program"]
 license = "Apache-2.0"
 
 [features]
