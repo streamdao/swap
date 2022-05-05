@@ -1,4 +1,4 @@
-# StreamSwap
+# StreamSwap - Alpha Version
 
 [![License](https://img.shields.io/crates/l/stream-swap-anchor)](https://github.com/streamdao/stream-swap/blob/master/LICENSE)
 [![Build Status](https://img.shields.io/github/workflow/status/streamdao/stream-swap/Program/master)](https://github.com/streamdao/stream-swap/actions/workflows/program.yml?query=branch%3Amaster)
