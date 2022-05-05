@@ -35,9 +35,9 @@ describe("admin test", () => {
   // owner of the user accounts
   let owner: Signer;
   // Stream swap
-  let stableSwap: StreamSwap;
-  let stableSwapAccount: Keypair;
-  let stableSwapProgramId: PublicKey;
+  let streamSwap: StreamSwap;
+  let streamSwapAccount: Keypair;
+  let streamSwapProgramId: PublicKey;
 
   const newAdmin: Keypair = Keypair.generate();
 
@@ -57,12 +57,12 @@ describe("admin test", () => {
       minterSigner: owner,
     });
 
-    stableSwapProgramId = SWAP_PROGRAM_ID;
-    stableSwapAccount = Keypair.generate();
+    streamSwapProgramId = SWAP_PROGRAM_ID;
+    streamSwapAccount = Keypair.generate();
 
     const { swap: newSwap } = await deployNewSwap({
       provider,
-      swapProgramID: stableSwapProgramId,
+      swapProgramID: streamSwapProgramId,
       adminAccount: owner.publicKey,
       tokenAMint,
       tokenBMint,
@@ -72,17 +72,17 @@ describe("admin test", () => {
       useAssociatedAccountForInitialLP: true,
       seedPoolAccounts,
 
-      swapAccountSigner: stableSwapAccount,
+      swapAccountSigner: streamSwapAccount,
     });
 
-    stableSwap = newSwap;
+    streamSwap = newSwap;
   }, BOOTSTRAP_TIMEOUT);
 
   it("Set fee account", async () => {
     const fetchedStreamSwap = await StreamSwap.load(
       connection,
-      stableSwapAccount.publicKey,
-      stableSwapProgramId
+      streamSwapAccount.publicKey,
+      streamSwapProgramId
     );
 
     const provider = new SignerWallet(owner).createProvider(connection);
@@ -110,8 +110,8 @@ describe("admin test", () => {
 
     const newSwap = await StreamSwap.load(
       connection,
-      stableSwap.config.swapAccount,
-      stableSwap.config.swapProgramID
+      streamSwap.config.swapAccount,
+      streamSwap.config.swapProgramID
     );
     expect(newSwap.state.tokenA.adminFeeAccount).toEqual(expectedFeeAccount);
   });
@@ -119,8 +119,8 @@ describe("admin test", () => {
   it("Commit new admin", async () => {
     const fetchedStreamSwap = await StreamSwap.load(
       connection,
-      stableSwapAccount.publicKey,
-      stableSwapProgramId
+      streamSwapAccount.publicKey,
+      streamSwapProgramId
     );
 
     const txn = new Transaction().add(
@@ -140,8 +140,8 @@ describe("admin test", () => {
 
     const newSwap = await StreamSwap.load(
       connection,
-      stableSwap.config.swapAccount,
-      stableSwap.config.swapProgramID
+      streamSwap.config.swapAccount,
+      streamSwap.config.swapProgramID
     );
     expect(newSwap.state.adminAccount).toEqual(owner.publicKey);
     expect(newSwap.state.futureAdminAccount).toEqual(newAdmin.publicKey);
@@ -151,8 +151,8 @@ describe("admin test", () => {
   it("Apply new admin", async () => {
     const fetchedStreamSwap = await StreamSwap.load(
       connection,
-      stableSwapAccount.publicKey,
-      stableSwapProgramId
+      streamSwapAccount.publicKey,
+      streamSwapProgramId
     );
 
     const txn = new Transaction().add(
@@ -170,8 +170,8 @@ describe("admin test", () => {
     );
     const newSwap = await StreamSwap.load(
       connection,
-      stableSwap.config.swapAccount,
-      stableSwap.config.swapProgramID
+      streamSwap.config.swapAccount,
+      streamSwap.config.swapProgramID
     );
     expect(newSwap.state.adminAccount).toEqual(newAdmin.publicKey);
     expect(newSwap.state.futureAdminAccount).toEqual(PublicKey.default);

@@ -1,0 +1,14 @@
+/workspace/swap/target/debug/deps/bytemuck-e39ef1a6f2e190b4.rmeta: /workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/lib.rs /workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/anybitpattern.rs /workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/checked.rs /workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/internal.rs /workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/zeroable.rs /workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/pod.rs /workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/no_uninit.rs /workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/contiguous.rs /workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/offset_of.rs /workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/transparent.rs
+
+/workspace/swap/target/debug/deps/bytemuck-e39ef1a6f2e190b4.d: /workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/lib.rs /workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/anybitpattern.rs /workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/checked.rs /workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/internal.rs /workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/zeroable.rs /workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/pod.rs /workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/no_uninit.rs /workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/contiguous.rs /workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/offset_of.rs /workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/transparent.rs
+
+/workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/lib.rs:
+/workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/anybitpattern.rs:
+/workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/checked.rs:
+/workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/internal.rs:
+/workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/zeroable.rs:
+/workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/pod.rs:
+/workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/no_uninit.rs:
+/workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/contiguous.rs:
+/workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/offset_of.rs:
+/workspace/.cargo/registry/src/github.com-1ecc6299db9ec823/bytemuck-1.9.1/src/transparent.rs:

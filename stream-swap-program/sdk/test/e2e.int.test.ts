@@ -55,9 +55,9 @@ describe("e2e test", () => {
   let adminFeeAccountB: PublicKey;
   // Stable swap
   let exchange: IExchange;
-  let stableSwap: StreamSwap;
-  let stableSwapAccount: Keypair;
-  let stableSwapProgramId: PublicKey;
+  let streamSwap: StreamSwap;
+  let streamSwapAccount: Keypair;
+  let streamSwapProgramId: PublicKey;
 
   beforeAll(async () => {
     // Bootstrap Test Environment ...
@@ -77,12 +77,12 @@ describe("e2e test", () => {
       initialTokenBAmount: INITIAL_TOKEN_B_AMOUNT,
     });
 
-    stableSwapProgramId = SWAP_PROGRAM_ID;
-    stableSwapAccount = Keypair.generate();
+    streamSwapProgramId = SWAP_PROGRAM_ID;
+    streamSwapAccount = Keypair.generate();
 
     const { swap: newSwap, initializeArgs } = await deployNewSwap({
       provider,
-      swapProgramID: stableSwapProgramId,
+      swapProgramID: streamSwapProgramId,
       adminAccount: owner.publicKey,
       tokenAMint,
       tokenBMint,
@@ -93,12 +93,12 @@ describe("e2e test", () => {
       useAssociatedAccountForInitialLP: true,
       seedPoolAccounts,
 
-      swapAccountSigner: stableSwapAccount,
+      swapAccountSigner: streamSwapAccount,
     });
 
     exchange = {
-      programID: stableSwapProgramId,
-      swapAccount: stableSwapAccount.publicKey,
+      programID: streamSwapProgramId,
+      swapAccount: streamSwapAccount.publicKey,
       lpToken: new SToken({
         symbol: "LP",
         name: "StreamSwap LP",
@@ -124,7 +124,7 @@ describe("e2e test", () => {
       ],
     };
 
-    stableSwap = newSwap;
+    streamSwap = newSwap;
     tokenPool = new SPLToken(
       connection,
       initializeArgs.poolTokenMint,
@@ -162,12 +162,12 @@ describe("e2e test", () => {
   it("loadStreamSwap", async () => {
     const fetchedStreamSwap = await StreamSwap.load(
       connection,
-      stableSwapAccount.publicKey,
-      stableSwapProgramId
+      streamSwapAccount.publicKey,
+      streamSwapProgramId
     );
 
     expect(fetchedStreamSwap.config.swapAccount).toEqual(
-      stableSwapAccount.publicKey
+      streamSwapAccount.publicKey
     );
     const { state } = fetchedStreamSwap;
     expect(state.tokenA.adminFeeAccount).toEqual(adminFeeAccountA);
@@ -186,7 +186,7 @@ describe("e2e test", () => {
     const exchangeInfo = await loadExchangeInfo(
       connection,
       exchange,
-      stableSwap
+      streamSwap
     );
     expect(calculateVirtualPrice(exchangeInfo)?.toFixed(4)).toBe("1.0000");
   });
@@ -206,7 +206,7 @@ describe("e2e test", () => {
     let txReceipt: TransactionResponse | null = null;
     // Depositing into swap
     const txn = new Transaction().add(
-      stableSwap.deposit({
+      streamSwap.deposit({
         userAuthority: owner.publicKey,
         sourceA: userAccountA,
         sourceB: userAccountB,
@@ -277,7 +277,7 @@ describe("e2e test", () => {
     let txReceipt = null;
     // Withdrawing pool tokens for A and B tokens
     const txn = new Transaction().add(
-      stableSwap.withdraw({
+      streamSwap.withdraw({
         userAuthority: owner.publicKey,
         userAccountA,
         userAccountB,
@@ -349,7 +349,7 @@ describe("e2e test", () => {
     let txReceipt = null;
     // Swapping
     const txn = new Transaction().add(
-      stableSwap.swap({
+      streamSwap.swap({
         userAuthority: owner.publicKey,
         userSource: userAccountA, // User source token account            | User source -> Swap source
         poolSource: tokenAccountA, // Swap source token account
@@ -414,7 +414,7 @@ describe("e2e test", () => {
     let txReceipt = null;
     // Swapping;
     const txn = new Transaction().add(
-      stableSwap.swap({
+      streamSwap.swap({
         userAuthority: owner.publicKey,
         userSource: userAccountB, // User source token account       | User source -> Swap source
         poolSource: tokenAccountB, // Swap source token account
@@ -479,7 +479,7 @@ describe("e2e test", () => {
     try {
       // Withdrawing pool tokens for token A
       const txn = new Transaction().add(
-        stableSwap.withdrawOne({
+        streamSwap.withdrawOne({
           userAuthority: owner.publicKey,
           baseTokenAccount: tokenAccountA,
           destinationAccount: userAccountA,
@@ -549,7 +549,7 @@ describe("e2e test", () => {
     try {
       // Withdrawing pool tokens for token B
       const txn = new Transaction().add(
-        stableSwap.withdrawOne({
+        streamSwap.withdrawOne({
           userAuthority: owner.publicKey,
           baseTokenAccount: tokenAccountB,
           destinationAccount: userAccountB,

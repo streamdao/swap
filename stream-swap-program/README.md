@@ -2,7 +2,7 @@
 
 An adaptation of the Solana [token-swap](https://github.com/solana-labs/solana-program-library/tree/master/token-swap/program) program implementing Curve's [StreamSwap](https://www.curve.fi/streamswap-paper.pdf) invariant.
 
-Click [here](https://streamswap.pro) to try it out live on the Solana testnet!
+Click [here](https://testnet-swap.streamprotocol.org) to try it out live on the Solana testnet!
 
 ## Development
 
@@ -11,7 +11,7 @@ _We recommend using the included Nix flake to develop within this repo._
 Download or update the Solana SDK by running:
 
 ```bash
-solana-install init 1.9.12
+solana-install init v1.9.19
 ```
 
 To build the program, run:
