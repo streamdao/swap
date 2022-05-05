@@ -12,7 +12,7 @@
     An automated market maker for mean-reverting trading pairs.
 </div>
 
-## Documentation
+## ToD Documentation
 
 Detailed information on how to build on Stream Protocol can be found on the [StreamSwap developer documentation website](https://docs.streamprotocol.org/docs/swap/developing/overview).
 
