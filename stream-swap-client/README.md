@@ -4,7 +4,7 @@ StreamSwap Rust client.
 
 ## Documentation
 
-Detailed information on how to build on Stream Protocol dApp´s can be found on the [Stream developer documentation website](https://docs.streamprotocol.org/docs/developing/overview).
+Detailed information on how to build on Stream Protocol´s Swap can be found on the [Stream Protocol developer documentation website](https://docs.streamprotocol.org/docs/developing/overview).
 
 ## License
 
