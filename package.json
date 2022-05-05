@@ -1,0 +1,23 @@
+{
+  "name": "stream-swap",
+  "version": "1.0.0",
+  "description": "an automated market maker for mean-reverting trading pairs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/streamdao/swap.git"
+  },
+  "keywords": [
+    "swap",
+    "stream"
+  ],
+  "author": "Stream Protocol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/streamdao/swap/issues"
+  },
+  "homepage": "https://github.com/streamdao/swap#readme"
+}
