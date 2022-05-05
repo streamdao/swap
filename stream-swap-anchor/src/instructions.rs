@@ -19,7 +19,7 @@ pub fn initialize<'a, 'b, 'c, 'info>(
     fees: stream_swap_client::fees::Fees,
 ) -> Result<()> {
     let ix = stream_swap_client::instruction::initialize(
-        // token program ID is verified by the stable swap program
+        // token program ID is verified by the stream swap program
         ctx.accounts.token_program.key,
         ctx.accounts.swap.key,
         ctx.accounts.swap_authority.key,
@@ -74,7 +74,7 @@ pub fn deposit<'a, 'b, 'c, 'info>(
     min_mint_amount: u64,
 ) -> Result<()> {
     let ix = stream_swap_client::instruction::deposit(
-        // token program ID is verified by the stable swap program
+        // token program ID is verified by the stream swap program
         ctx.accounts.user.token_program.key,
         ctx.accounts.user.swap.key,
         ctx.accounts.user.swap_authority.key,
@@ -220,7 +220,7 @@ pub fn withdraw<'a, 'b, 'c, 'info>(
     minimum_token_b_amount: u64,
 ) -> Result<()> {
     let ix = stream_swap_client::instruction::withdraw(
-        // token program ID is verified by the stable swap program
+        // token program ID is verified by the stream swap program
         ctx.accounts.user.token_program.key,
         ctx.accounts.user.swap.key,
         ctx.accounts.user.swap_authority.key,
